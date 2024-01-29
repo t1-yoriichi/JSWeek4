@@ -5,13 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Traffic Lights</title>
     <style> 
-        .container h1
-        {
-            text-align: center;
-        }
         .container_btn
         {
-            text-align: center;
             margin-bottom: 5px;
         }
         .container_btn button
@@ -21,63 +16,54 @@
             border: 1px solid black;
             border-radius: 2px;
         }
-        .container_scr
-        {
-            background-color: aqua;
-        }
         .container_column 
         {
-            justify-content: center;
             align-items: center;
-            height: 120px;
-            background-color: gray;
             padding: 20px;
-            margin-top: 20px;
             float: left;
-            margin-bottom: 5px;
-            border: 1px solid black;
             border-radius: 5px;
+            display: flex;
         }
         .container_column .greenl {
             width: 25px;
             height: 25px;
             padding: 5px;
             border-radius: 50%;
-            margin-bottom: 10px;
+            margin: 10px;
+            background-color: gray;
         }
         .container_column .redl {
             width: 25px;
             height: 25px;
             padding: 5px;
             border-radius: 50%;
-            margin-bottom: 10px;
+            margin: 10px;
+            background-color: gray;
         }
         .container_column .yellowl {
             width: 25px;
             height: 25px;
             padding: 5px;
             border-radius: 50%;
-            margin-bottom: 10px;
+            margin: 10px;
+            background-color: gray;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Traffic Lights</h1>
         <div class="container_btn">
             <button onclick="Redlight()">Red</button>
             <button onclick="Yellowlight()">Yellow</button>
             <button onclick="Greenlight()">Green</button>
-        </div>   
-        <div class="container_scrn">
-            <div class="container_column">
-                <div id="red" class="redl"></div>
-                <div id="yellow" class="yellowl"></div>
-                <div id="green" class="greenl"></div>
-            </div> 
         </div>
-    </div>
+        <div class="container_column">
+            <div id="red" class="redl"></div>
+            <div id="yellow" class="yellowl"></div>
+            <div id="green" class="greenl"></div>
+        </div>    
+    </div>     
     <script language="javascript" type="text/javascript">
         function Greenlight() {
             var greenLight = document.getElementById("green");
@@ -85,25 +71,25 @@
             var yellowLight = document.getElementById("yellow");
 
             greenLight.style.backgroundColor = "green";
-            redLight.style.backgroundColor = "white";
-            yellowLight.style.backgroundColor = "white";
+            redLight.style.backgroundColor = "gray";
+            yellowLight.style.backgroundColor = "gray";
         }
         function Redlight() {
             var greenLight = document.getElementById("green");
             var redLight = document.getElementById("red");
             var yellowLight = document.getElementById("yellow");
 
-            greenLight.style.backgroundColor = "white";
+            greenLight.style.backgroundColor = "gray";
             redLight.style.backgroundColor = "red";
-            yellowLight.style.backgroundColor = "white";
+            yellowLight.style.backgroundColor = "gray";
         }
         function Yellowlight() {
             var greenLight = document.getElementById("green");
             var redLight = document.getElementById("red");
             var yellowLight = document.getElementById("yellow");
 
-            greenLight.style.backgroundColor = "white";
-            redLight.style.backgroundColor = "white";
+            greenLight.style.backgroundColor = "gray";
+            redLight.style.backgroundColor = "gray";
             yellowLight.style.backgroundColor = "yellow";
         }
     </script>
